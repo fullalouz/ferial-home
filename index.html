@@ -6,67 +6,77 @@
     <title>INWOOD - Furniture Collection</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">
-            <span class="logo-icon">🌿</span> INWOOD
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="nav-icons">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#" class="cart-icon-wrapper" style="position: relative;">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span id="cartCount" style="position: absolute; top: -8px; right: -10px; background-color: var(--accent-green); color: white; border-radius: 50%; padding: 2px 6px; font-size: 0.75rem; font-weight: bold;">0</span>
-            </a>
-            <a href="#"><i class="fa-regular fa-user"></i></a>
-        </div>
-    </header>
+    <div class="hero-wrapper">
+        <header class="navbar" id="mainHeader">
+            <div class="logo">
+                <svg class="logo-svg" viewBox="0 0 350 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="90" height="90" rx="10" fill="#07484A"/>
+                    <path d="M 30 15 C 20 15 20 40 30 45 L 30 20 Z" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+                    <path d="M 40 15 C 50 15 50 40 40 45 L 40 20 Z" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+                    <path d="M 25 45 C 10 55 20 85 30 85 H 40 V 45 Z" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+                    <path d="M 40 10 V 85" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M 40 45 H 80 V 85 M 40 60 H 80" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+                    <text x="108" y="70" font-family="'Poppins', sans-serif" font-weight="700" font-size="62" fill="#07484A" letter-spacing="1">INWOOD</text>
+                </svg>
+            </div>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" class="cart-icon-wrapper">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount">0</span>
+                </a>
+                <a href="#"><i class="fa-regular fa-user"></i></a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Exclusive Deals of Furniture Collection</h1>
-            <p>Explore different categories. Find the best deals.</p>
-            <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Hero Furniture">
-        </div>
-    </section>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Exclusive Deals of<br>Furniture Collection</h1>
+                <p>Explore different categories. Find the best deals.</p>
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Modern Sofa">
+            </div>
+        </section>
+    </div>
 
-    <section class="categories-section">
+    <section class="categories-section" id="categories">
         <h2 class="section-title">Explore by Category</h2>
-        
         <div class="category-container">
             <div class="category-sidebar">
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" placeholder="Search">
                 </div>
-                
                 <div class="menu-scroll-wrapper">
                     <ul class="category-list">
                         <li class="active"><a href="#">Bedroom</a></li>
-                        <li><a href="#">Dinning Room</a></li>
+                        <li><a href="#">Dining Room</a></li>
                         <li><a href="#">Meeting Room</a></li>
                         <li><a href="#">Workspace</a></li>
                         <li><a href="#">Living Room</a></li>
                         <li><a href="#">Kitchen</a></li>
                         <li><a href="#">Living Space</a></li>
                     </ul>
-
                     <div class="custom-scroll">
                         <div class="scroll-bar"></div>
                         <div class="scroll-arrows">
@@ -75,61 +85,110 @@
                         </div>
                     </div>
                 </div>
-
-                <button class="btn-all-categories">
-                    All Categories &rarr;
-                </button>
+                <button class="btn-all-categories">All Categories &rarr;</button>
             </div>
-
+            
             <div class="category-grid">
-                <div class="cat-card active-card">
-                    <div class="cat-card-content">
+                <div class="cat-card" style="background-image: url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80');">
+                    <div class="cat-card-overlay">
                         <h3>Bedroom</h3>
                         <button class="btn-explore">Explore</button>
                     </div>
                 </div>
-
-                <div class="cat-card"></div>
-                <div class="cat-card"></div>
-                <div class="cat-card"></div>
-                <div class="cat-card"></div>
-                <div class="cat-card"></div>
+                <div class="cat-card" style="background-image: url('https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=600&q=80');">
+                    <div class="cat-card-overlay">
+                        <h3>Dining Room</h3>
+                    </div>
+                </div>
+                <div class="cat-card" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80');">
+                    <div class="cat-card-overlay">
+                        <h3>Meeting Room</h3>
+                    </div>
+                </div>
+                <div class="cat-card" style="background-image: url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80');">
+                    <div class="cat-card-overlay">
+                        <h3>Workspace</h3>
+                    </div>
+                </div>
+                <div class="cat-card" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80');">
+                    <div class="cat-card-overlay">
+                        <h3>Living Room</h3>
+                    </div>
+                </div>
+                <div class="cat-card" style="background-image: url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80');">
+                    <div class="cat-card-overlay">
+                        <h3>Kitchen</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="products-section">
+    <section class="products-section" id="products">
         <h2 class="section-title">Popular Products</h2>
-        <div class="products-grid">
-            <div class="product-card bg-mint">
-                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=400&q=80" alt="Armchair">
-                <h4>Armchair</h4>
-                <p>Light single chair</p>
-                <span class="price">$145</span>
-                <button class="btn add-btn" style="margin-top: 10px; width: 100%;">Add to Cart</button>
+        
+        <div class="bg-sofa-overlay">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" alt="Background Armchair">
+        </div>
+
+        <div class="products-container-wrapper">
+            <div class="products-slider" id="productsSlider">
+                <div class="product-card bg-mint">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=500&q=80" alt="Armchair">
+                    </div>
+                    <div class="details">
+                        <h4>Armchair</h4>
+                        <p>Light single chair</p>
+                        <span class="price">$145</span>
+                    </div>
+                </div>
+
+                <div class="product-card bg-blue">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=500&q=80" alt="Premium Sofa">
+                    </div>
+                    <div class="details">
+                        <h4>Premium Sofa</h4>
+                        <p>Light single chair</p>
+                        <span class="price">$145</span>
+                    </div>
+                </div>
+
+                <div class="product-card bg-lavender">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=500&q=80" alt="Minimal Sofa">
+                    </div>
+                    <div class="details">
+                        <h4>Minimal Sofa</h4>
+                        <p>Light single chair</p>
+                        <span class="price">$145</span>
+                    </div>
+                </div>
+
+                <div class="product-card bg-sand">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=500&q=80" alt="Dining Chair">
+                    </div>
+                    <div class="details">
+                        <h4>Dining Chair</h4>
+                        <p>Light single chair</p>
+                        <span class="price">$145</span>
+                    </div>
+                </div>
             </div>
-            <div class="product-card bg-blue">
-                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400&q=80" alt="Premium Sofa">
-                <h4>Premium Sofa</h4>
-                <p>Light single chair</p>
-                <span class="price">$145</span>
-                <button class="btn add-btn" style="margin-top: 10px; width: 100%;">Add to Cart</button>
-            </div>
-            <div class="product-card bg-lavender">
-                <img src="https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?auto=format&fit=crop&w=400&q=80" alt="Minimal Sofa">
-                <h4>Minimal Sofa</h4>
-                <p>Light single chair</p>
-                <span class="price">$145</span>
-                <button class="btn add-btn" style="margin-top: 10px; width: 100%;">Add to Cart</button>
-            </div>
-            <div class="product-card bg-sand">
-                <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="Dining Chair">
-                <h4>Dining Chair</h4>
-                <p>Light single chair</p>
-                <span class="price">$145</span>
-                <button class="btn add-btn" style="margin-top: 10px; width: 100%;">Add to Cart</button>
+
+            <div class="products-slider-controls">
+                <div class="slider-track-line">
+                    <div class="slider-fill-line"></div>
+                </div>
+                <div class="slider-nav-arrows">
+                    <button class="slider-btn" id="slideLeft"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="slider-btn" id="slideRight"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
+
         <div class="center-btn">
             <button class="btn btn-outline">Explore all items &rarr;</button>
         </div>
@@ -139,7 +198,8 @@
         <h2 class="section-title">Special Package</h2>
         <div class="package-container">
             <div class="package-main">
-                <div class="package-image-placeholder">
+                <div class="package-image-container">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" alt="Larkin Wood Full Set">
                     <span class="expand-icon"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="package-main-info">
@@ -154,7 +214,7 @@
                         </div>
                         <span class="price">$729.99</span>
                     </div>
-                    <button id="packageBtn" class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                 </div>
             </div>
 
@@ -168,7 +228,7 @@
                 <div class="package-list-wrapper">
                     <div class="package-list">
                         <div class="package-item active-item">
-                            <div class="item-thumb"></div>
+                            <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=200&q=80" class="item-thumb" alt="Living Room Family Set">
                             <div class="item-details">
                                 <div class="item-header">
                                     <h5>Living Room Family Set</h5>
@@ -186,7 +246,7 @@
                         </div>
 
                         <div class="package-item">
-                            <div class="item-thumb"></div>
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=200&q=80" class="item-thumb" alt="Living Room Special Set">
                             <div class="item-details">
                                 <div class="item-header">
                                     <h5>Living Room Special Set</h5>
@@ -205,10 +265,10 @@
                         </div>
 
                         <div class="package-item">
-                            <div class="item-thumb"></div>
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=200&q=80" class="item-thumb" alt="Living Room Luxury Set">
                             <div class="item-details">
                                 <div class="item-header">
-                                    <h5>Living Room Special Set</h5>
+                                    <h5>Living Room Luxury Set</h5>
                                     <span class="item-price">$587.99</span>
                                 </div>
                                 <div class="rating-sm">
@@ -239,44 +299,78 @@
     <section class="our-creation-section">
         <div class="creation-container">
             <div class="creation-card green-card">
-                <h2>Our Own Creation</h2>
-                <p>Designed in our studio</p>
+                <div class="card-content">
+                    <h2>Our<br>Own Creation</h2>
+                    <p>Designed in our studio</p>
+                </div>
                 <div class="creation-footer">
-                    <span>More</span>
+                    <span class="more-text">More</span>
                     <div class="slider-bar"><div class="slider-progress"></div></div>
                     <div class="slider-nav">
-                        <button class="nav-prev"><i class="fa-solid fa-arrow-left"></i></button>
-                        <button class="nav-next"><i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="nav-btn btn-white"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="nav-btn btn-pink"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
 
-            <div class="creation-card image-card">
+            <div class="creation-card image-card featured-card" style="background-image: url('https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=800&q=80');">
                 <button class="btn-explore-rooms">Explore All Rooms</button>
             </div>
-            <div class="creation-card image-card"></div>
-            <div class="creation-card image-card"></div>
+
+            <div class="creation-card image-card" style="background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="creation-card image-card" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="creation-card image-card" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80');"></div>
         </div>
     </section>
 
     <section class="benefits-section">
-        <h2 class="section-title">Benefits for your expediency</h2>
+        <h2 class="benefits-title">Benefits for your expediency</h2>
         <div class="benefits-grid">
+            
             <div class="benefit-item">
-                <div class="icon-box"><i class="fa-solid fa-credit-card"></i></div>
+                <div class="icon-box icon-purple">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M72 32H28C23.6 32 20 35.6 20 40V68C20 72.4 23.6 76 28 76H72C76.4 76 80 72.4 80 68V40C80 35.6 76.4 32 72 32Z" stroke="#70908B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 44H80" stroke="#70908B" stroke-width="4"/>
+                        <path d="M30 60H46" stroke="#70908B" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M58 60H66" stroke="#70908B" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M35 24L65 24L55 40L25 40Z" stroke="#70908B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="45" cy="32" r="3" fill="#70908B"/>
+                    </svg>
+                </div>
                 <h3>Payment Method</h3>
                 <p>We offer flexible payment options, to make easier.</p>
             </div>
+
             <div class="benefit-item">
-                <div class="icon-box"><i class="fa-solid fa-box-archive"></i></div>
+                <div class="icon-box icon-peach">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28 36L50 24L72 36V64L50 76L28 64V36Z" stroke="#70908B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M28 36L50 48L72 36" stroke="#70908B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M50 48V76" stroke="#70908B" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="38" cy="62" r="14" fill="#FFF4E7" stroke="#70908B" stroke-width="4"/>
+                        <path d="M43 62C43 58 37 55 35 59" stroke="#70908B" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M33 57L31 62L36 64" stroke="#70908B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <h3>Return policy</h3>
                 <p>You can return a product within 30 days.</p>
             </div>
+
             <div class="benefit-item">
-                <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+                <div class="icon-box icon-mint">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 52C22 36.5 34.5 24 50 24C65.5 24 78 36.5 78 52V68" stroke="#70908B" stroke-width="5" stroke-linecap="round"/>
+                        <rect x="18" y="48" width="10" height="22" rx="5" fill="#70908B"/>
+                        <rect x="72" y="48" width="10" height="22" rx="5" fill="#70908B"/>
+                        <path d="M74 68C74 76 66 82 56 82H52" stroke="#70908B" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="48" cy="82" r="4" fill="#70908B"/>
+                    </svg>
+                </div>
                 <h3>Customer Support</h3>
                 <p>Our customer support is 24/7.</p>
             </div>
+
         </div>
     </section>
 
@@ -284,17 +378,21 @@
         <h2 class="section-title">Testimonials</h2>
         <p class="subtitle">Over 15,000 happy customers.</p>
 
-        <div class="testimonial-card">
-            <div class="quote-bg">“</div>
-            <div class="testimonial-img"></div>
-            <div class="testimonial-content">
-                <p class="review-text">“My experience with Mark is a complete sucess, from customer service, wide range of products, clean store, purchasing experience, the newsletter.Thank you.”</p>
-                <h4 class="author-name">Leona Paul</h4>
-                <p class="author-title">CEO of Floatcom</p>
-            </div>
-            <div class="testimonial-arrows">
-                <button class="arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="arrow-btn active"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="testimonial-wrapper">
+            <div class="quote-mark-overlay">“</div>
+            <div class="testimonial-card">
+                <div class="testimonial-img-box">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Leona Paul" class="testimonial-img">
+                </div>
+                <div class="testimonial-content">
+                    <p class="review-text">“My experience with Mark is a complete sucess, from customer service, wide range of products, clean store, purchasing experience, the newsletter.Thank you.”</p>
+                    <h4 class="author-name">Leona Paul</h4>
+                    <p class="author-title">CEO of Floatcom</p>
+                </div>
+                <div class="testimonial-dots-decor">
+                    <span class="dot pink"></span>
+                    <span class="dot blue"></span>
+                </div>
             </div>
         </div>
 
@@ -307,25 +405,35 @@
     </section>
 
     <section class="newsletter-section">
-        <div class="newsletter-banner"></div>
-
+        <div class="newsletter-banner" style="background-image: url('https://images.unsplash.com/photo-1540518614846-7ede433c5172?auto=format&fit=crop&w=800&q=80');"></div>
         <div class="newsletter-content">
-            <h2>Join Our Newsletter</h2>
-            <p>Receive exclusive deals, discounts and many offers.</p>
-
-            <form id="newsletterForm" class="newsletter-form">
-                <div class="input-wrapper">
-                    <input type="email" placeholder="Enter your email" required>
-                </div>
-                <button type="submit" class="btn-subscribe">Subscribe</button>
-            </form>
+            <div class="newsletter-inner">
+                <h2>Join Our <span class="highlight">Newsletter</span></h2>
+                <p>Receive exclusive deals, discounts and many offers.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="footer-container">
             <div class="footer-brand">
-                <div class="logo"><span class="logo-icon">🌿</span> INWOOD</div>
+                <div class="footer-logo">
+                    <svg class="logo-svg" viewBox="0 0 350 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="90" height="90" rx="10" fill="#07484A"/>
+                        <path d="M 30 15 C 20 15 20 40 30 45 L 30 20 Z" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+                        <path d="M 40 15 C 50 15 50 40 40 45 L 40 20 Z" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+                        <path d="M 25 45 C 10 55 20 85 30 85 H 40 V 45 Z" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+                        <path d="M 40 10 V 85" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M 40 45 H 80 V 85 M 40 60 H 80" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+                        <text x="108" y="70" font-family="'Poppins', sans-serif" font-weight="700" font-size="62" fill="#07484A" letter-spacing="1">INWOOD</text>
+                    </svg>
+                </div>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -334,7 +442,7 @@
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
                 <p class="address-title">Address</p>
-                <p>+123 654 987<br>877 The Bronx, NY<br>14568, USA</p>
+                <p class="address-text">+123 654 987<br>877 The Bronx, NY<br>14568, USA</p>
             </div>
             <div class="footer-links">
                 <div>
@@ -371,12 +479,10 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            Copyright ©2026 Omar sabah. All Rights Reserved
+        <div class="copyright-bar">
+            Copyright ©2026 Omar Sabah. All Rights Reserved
         </div>
     </footer>
-
-    <div id="toast" style="display: none; position: fixed; bottom: 30px; right: 30px; background-color: var(--primary-green); color: white; padding: 12px 24px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; font-size: 0.9rem;"></div>
 
     <script src="script.js"></script>
 </body>
